@@ -1,13 +1,13 @@
 # Objective:
 Build a web app which loads data to a grid which can be accessed by CRUD operations 
 
-#Stack: 
+# Stack: 
 ## Frontend:
 React
 Ag-Grid
 Material UI
 Typescript
-##Backend:
+## Backend:
 Python/Flask
-##Database:
+## Database:
 TBD
