@@ -1,31 +1,28 @@
 import React, { useState } from 'react';
-import Button from '@mui/material/Button'
-import { AgGridReact } from 'ag-grid-react';
+import { Box, Container, Button } from '@mui/material';
+import GenericGrid from './Common/GenericGrid/GenericGrid';
+import CustomChart from './Chart/CustomChart';
 
 function App() {
   const [rowData] = useState([
-       {make: "Toyota", model: "Celica", price: 35000},
-       {make: "Ford", model: "Mondeo", price: 32000},
-       {make: "Porsche", model: "Boxster", price: 72000}
+       {Date: "6/30/22", AccountValue: 10300.56, NetProfit: 0},
+       {Date: "6/30/22", AccountValue: 10400.56, NetProfit: 100},
+       {Date: "6/30/22", AccountValue: 11400.56, NetProfit: 1100},
    ]);
    
    const [columnDefs] = useState([
-       { field: 'make' },
-       { field: 'model' },
-       { field: 'price' }
+       { field: 'Date' },
+       { field: 'AccountValue' },
+       { field: 'NetProfit' }
    ])
   
   return (
-    <div className="App">
+    <div>
       <Button variant="text">Testing</Button>
-      <div className="ag-theme-alpine" style={{height: 400, width: 600}}>
-           <AgGridReact
-               rowData={rowData}
-               columnDefs={columnDefs}>
-           </AgGridReact>
-       </div>
+      <GenericGrid rowData={rowData} colData={columnDefs}/>
     </div>
   );
 }
-
+//<Button variant="text">Testing</Button>
+//<GenericGrid rowData={rowData} colData={columnDefs}/>
 export default App;
