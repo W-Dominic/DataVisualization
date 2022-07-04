@@ -29,7 +29,7 @@ function MyChart(props:ChartData){
         (): AxisOptions<DataItem>[] => [
         {
             getValue: (datum: DataItem) => datum.AccountValue,
-            elementType:'bar',
+            elementType: 'line',
         }],[])
     return (
         <Chart 

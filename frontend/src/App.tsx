@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { Box, Container, Button } from '@mui/material';
+import { useState } from 'react';
+import { Button } from '@mui/material';
 import GenericGrid from './Common/GenericGrid/GenericGrid';
-import { DataItem } from './Common/DataItem/model';
 import MyChart from './Chart/MyChart';
 
 function App() {
