@@ -1,10 +1,5 @@
 import { AgGridReact } from 'ag-grid-react/lib/agGridReact';
-
-interface GridData {
-    rowData: any 
-    colData: any
-    //TODO: Specify better types
-}
+import { GridData } from './GridDataModel';
 
 function GenericGrid(props: GridData) {
 
