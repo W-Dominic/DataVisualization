@@ -1,5 +1,5 @@
 export interface GridData {
-    rowData: any 
+    rowData: any, 
     colData: any
     //TODO: Specify better types
 }
