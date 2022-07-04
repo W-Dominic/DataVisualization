@@ -4,8 +4,7 @@ import { AxisOptions, Chart } from 'react-charts';
 
 interface ChartData {
     label:string,
-    rowData: DataItem[],
-    colData:any
+    rowData: DataItem[]
 } 
 type Series = {
     label: string,
@@ -13,27 +12,25 @@ type Series = {
 }
 
 function MyChart(props:ChartData){
-    const data: Series[] = [
+    const data: Series[] = React.useMemo(
+        () => [
         {
             label: props.label,
             data: props.rowData
         }
-    ]
+    ], []); //useMemo for performance
 
     //creating the chart
     const primaryAxis = useMemo( 
         (): AxisOptions<DataItem> => ({
-            getValue: (datum: DataItem) => datum.Date
-        }),
-        []
-    )
+            getValue: (datum: DataItem) => datum.Day
+        }),[])
     const secondaryAxes = useMemo(
         (): AxisOptions<DataItem>[] => [
         {
-            getValue: (datum: DataItem) => datum.AccountValue
-        }
-        ],[]
-        )
+            getValue: (datum: DataItem) => datum.AccountValue,
+            elementType:'bar',
+        }],[])
     return (
         <Chart 
             options={{
