@@ -4,7 +4,7 @@ import datetime
 
 app=Flask(__name__)
 
-@app.route('/api/stonksdata')
+@app.route('/api/stonksdata', methods=['GET'])
 def get_data():
     data = [
         {"Day": 1, "AccountValue": 0.0, "NetProfit": 0},
