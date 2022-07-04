@@ -1,4 +1,4 @@
-import React, { Component, useState, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { DataItem } from '../Common/DataItem/model';
 import { AxisOptions, Chart } from 'react-charts';
 
@@ -7,12 +7,12 @@ interface ChartData {
     rowData: DataItem[],
     colData:any
 } 
+type Series = {
+    label: string,
+    data: DataItem[]
+}
 
 function MyChart(props:ChartData){
-    type Series = {
-        label: string,
-        data: DataItem[]
-    }
     const data: Series[] = [
         {
             label: props.label,
@@ -21,16 +21,16 @@ function MyChart(props:ChartData){
     ]
 
     //creating the chart
-    const primaryAxis:any = useMemo( 
+    const primaryAxis = useMemo( 
         (): AxisOptions<DataItem> => ({
-            getValue: (datum: DataItem) => datum.AccountValue,
+            getValue: (datum: DataItem) => datum.Date
         }),
         []
     )
-    const secondaryAxes:any = useMemo(
+    const secondaryAxes = useMemo(
         (): AxisOptions<DataItem>[] => [
         {
-            getValue: (datum: DataItem) => datum.Date,
+            getValue: (datum: DataItem) => datum.AccountValue
         }
         ],[]
         )
