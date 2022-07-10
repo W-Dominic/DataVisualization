@@ -18,7 +18,7 @@ function MyChart(props:ChartData){
             label: props.label,
             data: props.rowData
         }
-    ], []); //useMemo for performance
+    ], [props.label, props.rowData]); //useMemo for performance
 
     //creating the chart
     const primaryAxis = useMemo( 

@@ -7,14 +7,15 @@ function App() {
   const [rowData, setRowData] = useState([
        {Day: 0, AccountValue: 0.0, NetProfit: 0},
    ]);
-   
+
    const [columnDefs] = useState([
        { field: 'Day' },
        { field: 'AccountValue' },
        { field: 'NetProfit' }
    ])
+
    useEffect(() => {
-     fetch("http://localhost:5000/data")
+     fetch("http://localhost:5000/api/stonksdata")
      .then((res) =>
      res.json()
      .then((data) => {
@@ -22,7 +23,8 @@ function App() {
      })
      );
      console.log(rowData[1]); 
-   }, []);
+   }, [rowData]);
+
   return (
     <div>
       <Button variant="text">Testing</Button>
