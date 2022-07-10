@@ -14,12 +14,14 @@ function App() {
        { field: 'NetProfit' }
    ])
    useEffect(() => {
-     fetch("/api/stonksdata").then((res) =>
+     fetch("http://localhost:5000/data")
+     .then((res) =>
      res.json()
      .then((data) => {
        setRowData(data)
      })
-     ); 
+     );
+     console.log(rowData[1]); 
    }, []);
   return (
     <div>
