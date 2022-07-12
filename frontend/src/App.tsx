@@ -22,7 +22,6 @@ function App() {
        setRowData(data)
      })
      );
-     console.log(rowData[1]); 
    }, [rowData]);
 
   return (

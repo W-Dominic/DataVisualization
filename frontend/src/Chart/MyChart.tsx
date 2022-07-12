@@ -19,7 +19,7 @@ function MyChart(props:ChartData){
             data: props.rowData
         }
     ], [props.label, props.rowData]); //useMemo for performance
-
+    
     //creating the chart
     const primaryAxis = useMemo( 
         (): AxisOptions<DataItem> => ({
