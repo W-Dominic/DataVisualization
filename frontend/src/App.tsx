@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@mui/material';
-import GenericGrid from './Common/GenericGrid/GenericGrid';
+import GenericGrid from './Common/GenericGrid';
 import MyChart from './Chart/MyChart';
 
 function App() {

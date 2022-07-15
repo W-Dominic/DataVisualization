@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { DataItem } from '../Common/DataItem/model';
+import { DataItem } from './model';
 import { AxisOptions, Chart } from 'react-charts';
 
 interface ChartData {
