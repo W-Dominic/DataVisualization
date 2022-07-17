@@ -15,7 +15,7 @@ function App() {
    ])
 
    useEffect(() => {
-     fetch("http://localhost:5000/api/stonksdata")
+     fetch("http://localhost:8000/api/stonksdata")
      .then((res) =>
      res.json()
      .then((data) => {
