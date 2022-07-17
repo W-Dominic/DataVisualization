@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { DataItem } from '../Common/DataItem/model';
+import { DataItem } from './model';
 import { AxisOptions, Chart } from 'react-charts';
 
 interface ChartData {
@@ -19,7 +19,7 @@ function MyChart(props:ChartData){
             data: props.rowData
         }
     ], [props.label, props.rowData]); //useMemo for performance
-
+    
     //creating the chart
     const primaryAxis = useMemo( 
         (): AxisOptions<DataItem> => ({
