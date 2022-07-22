@@ -14,5 +14,4 @@ async def root():
         {"Day": 6, "AccountValue": 110.0, "NetProfit": 10}
         ]
     return data
-    return {"Hello":"hi"}
 
