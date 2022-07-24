@@ -1,0 +1,1 @@
+\copy FROM './data.csv' DELIMTER ',' CSV HEADER;
