@@ -7,9 +7,9 @@
 
 # testing
 /coverage
-/backend/vent
-/backend/venv
-/backend/__pycache__
+backend/vent
+backend/venv
+backend/__pycache__
 
 # production
 /build
