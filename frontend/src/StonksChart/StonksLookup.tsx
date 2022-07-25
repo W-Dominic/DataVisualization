@@ -7,16 +7,19 @@ import GenericGrid from "../Common/GenericGrid";
 
 export function StonksLookup(props: any){
     const [rowData, setRowData] = useState([
-      {Day: 0, AccountValue: 0.0, NetProfit: 0},
+      {day: "", accountvalue: 0.0, investments: 0.0, rothira: 0.0, netprofit: 0},
     ])
     const [columnDefs] = useState([
-       { field: 'Day' },
-       { field: 'AccountValue' },
-       { field: 'NetProfit' }
+       { field: 'day' },
+       { field: 'accountvalue' },
+       { field: 'investments' },
+       { field: 'rothira' },
+       { field: 'netprofit' }
     ])
     
     function onDataLoad(d : DataItem[]) : void {
         setRowData(d)
+        console.log(d)
     }
     function onLoadingFailed() : void {
         console.log("loading failed")

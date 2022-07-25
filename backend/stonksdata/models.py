@@ -1,5 +1,8 @@
 from sqlalchemy import Column, String, Float
 from sqlalchemy.orm import relationship
+import sys
+
+sys.path.insert(0, "../")
 
 from database import Base
 

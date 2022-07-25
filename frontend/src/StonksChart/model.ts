@@ -1,5 +1,7 @@
 export interface DataItem {
-    Day: number,
-    AccountValue: number,
-    NetProfit: number
+    day: string,
+    accountvalue: number,
+    investments: number,
+    rothira: number,
+    netprofit: number
 }

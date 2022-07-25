@@ -1,6 +1,8 @@
 from fastapi import FastAPI, Depends
-
 from sqlalchemy.orm import Session
+import sys 
+sys.path.insert(0, "./stonksdata")
+
 import crud, models, schemas
 from database import SessionLocal, engine
 
