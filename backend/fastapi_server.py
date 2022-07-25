@@ -15,3 +15,5 @@ async def root():
         ]
     return data
 
+#To run backend: uvicorn fastapi_server:app [--reload]
+
