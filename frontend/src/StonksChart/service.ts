@@ -5,7 +5,7 @@ export async function loadData(
     onLoadingFailed: () => void
 ){
     try {
-        fetch("http://localhost:8000/api/stonksdata")
+        fetch("http://localhost:8000/api/stonksdata/lookup")
         .then((res) =>
         res.json()
         .then((data) => onDataLoad(data))
