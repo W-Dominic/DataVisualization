@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-.venv
+backend/.venv
 
 # production
 /build
