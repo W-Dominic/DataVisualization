@@ -3,14 +3,13 @@ from sqlalchemy.orm import Session
 import sys 
 sys.path.insert(0, "./stonksdata")
 
-#import crud, models, schemas
-#from database import SessionLocal, engine
+import crud, models, schemas
+from database import SessionLocal, engine
 
-#models.Base.metadata.create_all(bind=engine)
+models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-'''
 #Dependency
 def get_db():
     db = SessionLocal()
@@ -18,7 +17,6 @@ def get_db():
         yield db #no idea what this does
     finally:
         db.close()
-'''
 
 @app.get("/api/stonksdata/test")
 async def root():
@@ -32,12 +30,11 @@ async def root():
         {"date": "1/7/2020" , "accountvalue": 27.0,"investments": 0.0, "rothira": 0.0, "NetProfit": 0},
         ]
     return data
-'''
+
 @app.get("/api/stonksdata/lookup/")
 def read_stonksdata(skip: int = 0, limit: int = 500, db: Session = Depends(get_db)):
     stonksdata = crud.get_stonksdata(db, skip=skip, limit=limit)
     return stonksdata
-'''
 
 #To run backend: uvicorn fastapi_server:app [--reload]
 
