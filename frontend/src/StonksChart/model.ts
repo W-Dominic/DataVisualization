@@ -1,5 +1,5 @@
 export interface DataItem {
-    day: string,
+    date: number,
     accountvalue: number,
     investments: number,
     rothira: number,

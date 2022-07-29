@@ -23,12 +23,12 @@ function MyChart(props:ChartData){
     //creating the chart
     const primaryAxis = useMemo( 
         (): AxisOptions<DataItem> => ({
-            getValue: (datum: DataItem) => datum.netprofit
+            getValue: (datum: DataItem) => datum.date
         }),[])
     const secondaryAxes = useMemo(
         (): AxisOptions<DataItem>[] => [
         {
-            getValue: (datum: DataItem) => datum.netprofit,
+            getValue: (datum: DataItem) => datum.accountvalue,
             elementType: 'line',
         }],[])
     return (

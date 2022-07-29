@@ -7,10 +7,10 @@ import GenericGrid from "../Common/GenericGrid";
 
 export function StonksLookup(props: any){
     const [rowData, setRowData] = useState([
-      {day: "", accountvalue: 0.0, investments: 0.0, rothira: 0.0, netprofit: 0},
+      {date: 0.0, accountvalue: 0.0, investments: 0.0, rothira: 0.0, netprofit: 0},
     ])
     const [columnDefs] = useState([
-       { field: 'day' },
+       { field: 'date' },
        { field: 'accountvalue' },
        { field: 'investments' },
        { field: 'rothira' },
