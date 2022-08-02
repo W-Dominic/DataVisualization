@@ -33,7 +33,7 @@ export function StonksLookup(props: any){
         <>
             <Button variant="text">Testing</Button>
             <div style={{width:'100%', height:500}}>
-                <MyChart label="testing" rowData={rowData}/>
+                <MyChart label="value" rowData={rowData}/>
             </div>
             <GenericGrid rowData={rowData} colData={columnDefs}/>
         </>

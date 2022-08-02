@@ -28,7 +28,7 @@ function MyChart(props:ChartData){
     const secondaryAxes = useMemo(
         (): AxisOptions<DataItem>[] => [
         {
-            getValue: (datum: DataItem) => datum.accountvalue,
+            getValue: (datum: DataItem) => datum.netprofit,
             elementType: 'line',
         }],[])
     return (
