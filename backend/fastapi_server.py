@@ -36,5 +36,26 @@ def read_stonksdata(skip: int = 0, limit: int = 500, db: Session = Depends(get_d
     stonksdata = crud.get_stonksdata(db, skip=skip, limit=limit)
     return stonksdata
 
+@app.post("/api/stonksdata/create/{date_value}/{accountvalue_value}/{investments_value}/{rothira_value}/{netprofit_value}", response_model = schemas.stonksdata)
+def create_stonksdata(
+    date_value : str,
+    accountvalue_value : float,
+    investments_value : float,
+    rothira_value : float,
+    netprofit_value : float,
+    stonksdata : schemas.stonksdataCreate,
+    db: Session = Depends(get_db)
+):
+    return crud.create_stonksdata(
+        db = db,
+        entry = stonksdata,
+        date_string = date_value,
+        accountvalue_value = accountvalue_value,
+        investments_value = investments_value,
+        rothira_value = rothira_value,
+        netprofit_value = netprofit_value     
+    )
+
+
 #To run backend: uvicorn fastapi_server:app [--reload]
 
