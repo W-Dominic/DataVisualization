@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
+      <q-toolbar class="bg-dark">
         <q-btn
           flat
           dense
@@ -12,10 +12,10 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Data Visualization
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div>Dominic Wojewodka</div>
       </q-toolbar>
     </q-header>
 
@@ -23,13 +23,9 @@
       v-model="leftDrawerOpen"
       show-if-above
       bordered
+      class="bg-dark text-white"
     >
       <q-list>
-        <q-item-label
-          header
-        >
-          Charts
-        </q-item-label>
 
         <EssentialLink
           v-for="link in essentialLinks"
@@ -50,6 +46,10 @@ import { defineComponent, ref } from 'vue'
 import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
+  {
+    title: 'Dashboard',
+    icon: 'home',
+  },
   {
     title: 'Stonks',
     icon: 'show_chart',
