@@ -17,6 +17,7 @@
 
 <script>
 import { defineComponent } from 'vue'
+import { useRouter } from 'vue-router';
 
 export default defineComponent({
   name: 'EssentialLink',
@@ -28,6 +29,10 @@ export default defineComponent({
     icon: {
       type: String,
       default: ''
+    },
+    path: {
+      type: String,
+      default:'/'
     }
   }
 })
