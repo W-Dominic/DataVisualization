@@ -49,26 +49,32 @@ const linksList = [
   {
     title: 'Dashboard',
     icon: 'home',
+    path: '/',
   },
   {
     title: 'Stonks',
     icon: 'show_chart',
+    path: '/stonks/',
   },
   {
     title: 'Steam Hours',
     icon: 'videogame_asset',
+    path: '/steamHours/',
   },
   {
     title: 'Screen Time',
     icon: 'phone_iphone',
+    path: '/screenTime',
   },
   {
     title: 'Fitness',
     icon: 'fitness_center',
+    path: '/fitness/',
   },
   {
     title: 'Overall',
     icon: 'assessment',
+    path: '/overall',
   }
 ]
 
