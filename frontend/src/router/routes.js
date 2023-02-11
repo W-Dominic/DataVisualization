@@ -11,7 +11,7 @@ const routes = [
     path: '/stonks/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/test_comp.vue') }
+      { path: '', component: () => import('src/pages/stonksData.vue') }
     ]
   },
   {
