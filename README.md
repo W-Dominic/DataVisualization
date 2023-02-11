@@ -3,13 +3,12 @@ Create a modern data visualization tool for various data sets.
 
 # Stack: 
 ## Frontend:
-React
+Vuejs
+Vue-router
+Quasar
+Chart-js
+JavaScript
 
-Ag-Grid
-
-Material UI
-
-Typescript
 ## Backend:
 Python
 
