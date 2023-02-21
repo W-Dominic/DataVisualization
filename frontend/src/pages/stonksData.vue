@@ -1,25 +1,56 @@
 <template>
   <div>
-    <canvas ref="lineChart"></canvas>
+    <Line :data="data" :options="options"/>
   </div>
 </template>
 
 <script>
-import { Line } from "vue-chartjs";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+} from 'chart.js'
+import { defineComponent } from 'vue'
+import { Line } from 'vue-chartjs'
 
-export default {
-  extends: Line,
-  mounted () {
-    this.renderChart({
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+)
+
+export default defineComponent({
+  name: "stonksData",
+  components: {
+    Line,
+  },
+  setup() {
+    const data = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [
         {
-          label: 'My First dataset',
-          backgroundColor: '#f87979',
+          label: 'Data One',
           data: [40, 39, 10, 40, 39, 80, 40]
         }
       ]
-    }, {responsive: true, maintainAspectRatio: false})
+    }
+    const options = {
+      responsive: true,
+      maintainAspectRatio: false
+    }
+    return {
+      data,
+      options,
+    }
   }
-}
+  })
 </script>
